@@ -36,7 +36,6 @@ class WeatherActivity: BaseVMActivity<WeatherViewModel>() {
         }
         navButton.setOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
-            // (chooseAreaFragment as ChooseAreaFragment).queryProvinces()
         }
     }
 

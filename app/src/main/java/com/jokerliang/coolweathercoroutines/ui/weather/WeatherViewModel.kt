@@ -12,16 +12,17 @@ import com.jokerliang.coolweathercoroutines.ui.main.MainActivity
  */
 class WeatherViewModel: BaseViewModel() {
     private val repository = WeatherRepository.instance
-    val uiState = MutableLiveData<WeatherUiModel>()
+        val uiState = MutableLiveData<WeatherUiModel>()
 
     val weather = MutableLiveData<Weather>()
 
     val background = MutableLiveData<String>()
 
     fun fetchWeather(weatherId: String) {
+        // launch 表示开启一个协程环境，类似于JS中的Async
         launch{
-            val fetchWeather = repository.fetchWeather(weatherId, MainActivity.KEY)
-            weather.value = fetchWeather.weather!![0]
+            val fetchWeather = repository.fetchWeather(weatherId, MainActivity.KEY) // 这里是运行在IO线程中，进行网络请求
+            weather.value = fetchWeather.weather!![0] // 这里是主线程了，用于视图更新
         }
     }
 
