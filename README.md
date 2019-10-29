@@ -64,7 +64,8 @@ weather.observe(this@WeatherActivity, Observer{
 - https://github.com/guolindev/coolweatherjetpack 郭神
 - https://github.com/lulululbj/wanandroid  本文实战项目就是学习这个项目来写的。
 
-
+# 求star #
+https://github.com/LoverJoker/coolweathercoroutines
 
 
 
