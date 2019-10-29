@@ -7,6 +7,9 @@
 ## Kotlin协程在Android中有什么用？ ##
 1. 用同步的方式写异步代码。使得代码更优雅。
 
+# 延伸阅读， 学习协程 #
+https://mp.weixin.qq.com/s/Tv-jEjJAn_gZ_M3qBG4Azw
+
 # 欧酷天气-协程MVVM版本 #
 ## 简介 ##
 学习一个新东西，最好的就是找一个项目练练手了。早一阵子学习了郭神coolweatherjetpack这个项目，发现郭神的这个项目显得不是那么的MVVM，在View层做了很多逻辑操作。这样还是会显得View层的比较臃肿。于是站在巨人的肩膀上，酷欧天气，协程MVVM版本就这样诞生了，整体思想基于郭神的coolweatherjetpack的版本，甚至很多代码比如页面布局我都是直接Copy郭神的。再次感谢郭神。
@@ -56,6 +59,10 @@ weather.observe(this@WeatherActivity, Observer{
 })
 ```
 
+# 大感谢 #
+- https://juejin.im/post/5d0afe0bf265da1b7152fb00  教你用协程。
+- https://github.com/guolindev/coolweatherjetpack 郭神
+- https://github.com/lulululbj/wanandroid  本文实战项目就是学习这个项目来写的。
 
 
 
