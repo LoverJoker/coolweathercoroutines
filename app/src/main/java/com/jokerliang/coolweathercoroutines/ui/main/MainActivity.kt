@@ -30,6 +30,7 @@ class MainActivity : BaseVMActivity<MainViewModel>() {
     }
 
     companion object {
+        // 请求天气API的Key，请到http://guolin.tech/api/weather/register申请免费的Key
         const val KEY = "45dd25f63300445e967b461d2037e4f9"
     }
 

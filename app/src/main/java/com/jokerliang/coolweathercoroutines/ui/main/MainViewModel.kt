@@ -16,7 +16,6 @@ class MainViewModel: BaseViewModel() {
      * 标识是否是第一次进入
      */
     fun isFirstEnter():Boolean {
-        Log.d("joker", "mainViewModel$repository")
         return repository.isFirstEnter()
     }
 

@@ -67,13 +67,13 @@ class ChooseAreaFragment: BaseFragment<ChooseAreaViewModel>() {
                     backButton.visibility = if (backButtonVisibility) View.VISIBLE else View.INVISIBLE
 
                     if (clickCounty()) {
+                        mViewModel.setEnterFlag(weatherId)
                         if (activity is WeatherActivity) {
                             val weatherActivity = activity as WeatherActivity
                             weatherActivity.drawerLayout.closeDrawers()
                             weatherActivity.swipeRefresh.isRefreshing = true
                             weatherActivity.refreshWeather(weatherId)
                         } else {
-                            mViewModel.setEnterFlag(weatherId)
                             val intent = Intent(activity, WeatherActivity::class.java)
                             intent.putExtra("weather_id", weatherId)
                             startActivity(intent)
